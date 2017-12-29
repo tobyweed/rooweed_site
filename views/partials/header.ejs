@@ -11,11 +11,14 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        function navbar(){            
-            
+        function navbar(){
             $(window).scroll(function(){
-                var fromTop = $(window).scrollTop()+100;
-                var about = $("#about").offset().top;
+                var fromTop = $(window).scrollTop()+100,
+                    navItems = $(".navbar").find("a"),
+                    about = $("#about").offset().top,
+                    resume = $("#resume").offset().top,
+                    contact = $("#contact").offset().top;
+                
                 if (fromTop >= about) {
                     $(".navbar").addClass("navbar-sticky");
                     $(".navbar").removeClass("navbar-bottom");
@@ -23,22 +26,20 @@
                     $(".navbar").removeClass("navbar-sticky");
                     $(".navbar").addClass("navbar-bottom");
                 }
-                  
-                var navItems = $("navbar").find("a"),
-                    about = $("#about-link").offset().top,
-                    resume = $("#resume").offset().top,
-                    contact = $("#contact").offset().top;
-                    
-                      
-                    if(fromTop >= about && fromTop <= resume) {
-                        $('a[href="#about"]').css("color","grey");
-                    } else if (fromTop >= resume && fromTop <= contact) {
-                        $('a[href="#resume"]').css("color","grey");
+                
+                $(navItems).removeClass("active");
+                
+                if(fromTop >= about) { 
+                    if(fromTop >= about && fromTop < resume) {
+                        $('a[href="#about"]').addClass("active");
+                    } else if (fromTop >= resume && fromTop < contact) {
+                        $('a[href="#resume"]').addClass("active");
                     } else if (fromTop >= contact) {
-                        $('a[href="#contact"]').css("color","grey");
+                        $('a[href="#contact"]').addClass("active");
                     }
-                });
-            };
+                }
+            });
+        };
     </script>
 <body onLoad="navbar()">
 

@@ -74,7 +74,8 @@ a:hover {
 }
 
 #about {
-    height: 400px;
+    padding-top: 50px;
+    height: 500px;
 }
 
 /*Intro*/
@@ -192,7 +193,6 @@ a:hover {
      color: gray;
 }
 
-
-/*.sticky + .content {*/
-/*  padding-top: 60px;*/
-/*}*/
+.active {
+    color: grey !important;
+}
