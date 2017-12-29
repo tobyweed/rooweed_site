@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roo Weed</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400|Source+Sans+Pro:200,300,400" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function navbar(){            
+            
+            $(window).scroll(function(){
+                var fromTop = $(window).scrollTop()+100;
+                var about = $("#about").offset().top;
+                if (fromTop >= about) {
+                    $(".navbar").addClass("navbar-sticky");
+                    $(".navbar").removeClass("navbar-bottom");
+                } else {
+                    $(".navbar").removeClass("navbar-sticky");
+                    $(".navbar").addClass("navbar-bottom");
+                }
+                  
+                var navItems = $("navbar").find("a"),
+                    about = $("#about-link").offset().top,
+                    resume = $("#resume").offset().top,
+                    contact = $("#contact").offset().top;
+                    
+                      
+                    if(fromTop >= about && fromTop <= resume) {
+                        $('a[href="#about"]').css("color","grey");
+                    } else if (fromTop >= resume && fromTop <= contact) {
+                        $('a[href="#resume"]').css("color","grey");
+                    } else if (fromTop >= contact) {
+                        $('a[href="#contact"]').css("color","grey");
+                    }
+                });
+            };
+    </script>
+<body onLoad="navbar()">
+
