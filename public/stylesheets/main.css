@@ -61,7 +61,7 @@ a:hover {
 /*====================================================About======================================================*/
 
 #about {
-    height: 500px;
+    padding-bottom: 150px;
 }
 
 /*Intro*/
@@ -91,8 +91,8 @@ a:hover {
 
 #portrait {
     width: 200px;
-    padding: 0;
-    margin:0;
+    /*padding: 0;*/
+    /*margin:0;*/
     display: inline-block;
     vertical-align: top;
 }
@@ -102,18 +102,17 @@ a:hover {
     display: inline-block;
 }
 
-.rightCol p {
+.rightCol span {
+    width: 65%;
     margin-top: 40px;
-    width: 60%;
-    display: inline-block;
+    float:right;
     margin: 0;
-    margin-left: 15px;
 }
 
 /*====================================================Resume======================================================*/
 
 #resume {
-    height:700px;
+    padding-bottom: 150px;
     background-color: rgba(150,150,150,.25);
 }
 
@@ -129,31 +128,26 @@ a:hover {
     border: solid rgba(100,100,100,.3) .3px;
 }
 
-#resume .content {
-    float: left;
-}
-
-#resume .row {
-    width: 100%;
-}
-
-#resume div {
-    float: left;
-}
-
-#resume ul {
-    margin-left: 50px;
+#resume .container {
+    margin: 0;
 }
 
 #resume li {
     margin-bottom: 10px;
 }
 
+#resume .content {
+    padding-top: 90px;
+}
+
 #resume .resume-content {
+    margin-left: 30px;
     border-left: solid rgba(100,100,100,.6) 1.1px;
+    padding-left: 10px;
 }
 
 .vertical-text {
+    padding-left: 10px;
 	transform: rotate(90deg);
 	transform-origin: left bottom;
 	width: 100px;
@@ -173,6 +167,7 @@ a:hover {
 
 #contact {
     color: rgba(50,50,50,.8);
+    padding-top: 115px;
 }
 
 #contact hr {
@@ -186,7 +181,7 @@ a:hover {
     transition: color .4s;
 }
 
-a:hover{
+#contact a:hover{
     color: black;
     text-decoration: none;
 }
@@ -195,6 +190,7 @@ a:hover{
     text-align: center;
     color: rgba(50,50,50,.8);
     font-size: 2em;
+    margin-top: 80px;
 }
 
 .contact-icons{
@@ -215,7 +211,7 @@ a:hover{
     z-index: 1000;
 }
 
-.navbar-bottom {
+.navbar-bottom{
     height: 100%;
     vertical-align:bottom;
 }
@@ -257,6 +253,11 @@ a:hover{
 }
 
 #nav-list li a:hover {
+     text-decoration:none;
+     color: gray;
+}
+
+#nav-list li a:focus {
      text-decoration:none;
      color: gray;
 }

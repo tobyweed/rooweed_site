@@ -13,6 +13,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         function navbar(){
+            
+            $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+               
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                }
+            });
+            
+            
             $(window).scroll(function(){
                 var fromTop = $(window).scrollTop()+100,
                     navItems = $(".navbar").find("a"),
@@ -33,9 +56,9 @@
                 if(fromTop >= about) { 
                     if(fromTop >= about && fromTop < resume) {
                         $('a[href="#about"]').addClass("active");
-                    } else if (fromTop >= resume && fromTop < contact) {
+                    } else if (fromTop >= resume && fromTop < resume+600) {
                         $('a[href="#resume"]').addClass("active");
-                    } else if (fromTop >= contact) {
+                    } else if (fromTop >= resume+600) {
                         $('a[href="#contact"]').addClass("active");
                     }
                 }
