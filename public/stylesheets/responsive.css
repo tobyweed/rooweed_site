@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) {
+    body{
+        font-size: 1.5em;
+    }
+    
+    body h1 {
+        font-size: 2em;
+    }
+    
+    .navbar {
+        width: 100vw;
+    }
+    
+    .navbar #nav-list .nav-item {
+        display: none;
+    }
+}
