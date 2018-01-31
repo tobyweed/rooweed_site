@@ -216,19 +216,22 @@ a:hover {
     vertical-align:bottom;
 }
 
+.navbar-bottom #nav-list {
+    position: absolute;
+    bottom: 0;
+}
+
 .navbar-sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 100px;
+  text-align: left;
   
   background-color: rgba(20,20,20,.9);
 }
 
 #nav-list {
-    position: absolute;
-    bottom: 0;
-    padding-bottom:40px;
+    padding:40px 0 37px 0;
 }
 
 #nav-list li{
@@ -260,6 +263,14 @@ a:hover {
 #nav-list li a:focus {
      text-decoration:none;
      color: gray;
+}
+
+#nav-list .dropdown {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
 }
 
 .active {

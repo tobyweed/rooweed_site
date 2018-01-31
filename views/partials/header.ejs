@@ -60,14 +60,20 @@
                 if(fromTop >= about) { 
                     if(fromTop >= about && fromTop < resume) {
                         $('a[href="#about"]').addClass("active");
-                    } else if (fromTop >= resume && fromTop < resume+600) {
+                    } else if (fromTop >= resume && fromTop < contact) {
                         $('a[href="#resume"]').addClass("active");
-                    } else if (fromTop >= resume+600) {
+                    } else if (fromTop >= contact) {
                         $('a[href="#contact"]').addClass("active");
                     }
                 }
             });
         };
+        
+        function dropNav() {
+            $(".dropdown-content").slideToggle("slow", function(){
+                $(this).removeClass("hidden");
+            });
+        }
     </script>
 <body onLoad="navbar()">
 

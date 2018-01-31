@@ -11,7 +11,46 @@
         width: 100vw;
     }
     
+    .navbar-sticky {
+        text-align: center;
+    }
+    
+    #nav-list {
+        width: 100%;
+    }
+    
+    .navbar #nav-list #nav-head {
+        padding-right: 0;
+        border: 0;
+        margin: 0;
+    }
+    
     .navbar #nav-list .nav-item {
         display: none;
+    }
+    
+    
+    .navbar #nav-list .dropdown {
+        display: inline-block;
+        margin-left: 10px;
+        padding-top: 2px;
+    }
+    
+    .dropdown-content {
+        border-top: solid .2px white;
+    }
+    
+    .dropdown-content .drop-list {
+        text-align: left;
+        width: 100%;
+        margin: 10px;
+    }
+    
+    .dropdown-content .drop-list .drop-item {
+        display: block;
+    }
+    
+    .dropdown-content .drop-list .drop-item a {
+        color: rgb(200,200,200);
     }
 }
