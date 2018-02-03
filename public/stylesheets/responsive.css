@@ -7,6 +7,14 @@
         font-size: 2em;
     }
     
+    #landing-banner{
+        background-image: url("https://cdn.spacetelescope.org/archives/images/wallpaper2/heic1509a.jpg");
+        background-attachment: scroll;
+        background-position: 50% 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
     .navbar {
         width: 100vw;
     }
