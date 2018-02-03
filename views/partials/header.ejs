@@ -70,9 +70,8 @@
         };
         
         function dropNav() {
-            $(".dropdown-content").slideToggle("slow", function(){
-                $(this).removeClass("hidden");
-            });
+            $(".dropdown-content").slideToggle(250, "linear");
+            $(".navbar-bottom").toggleClass("colored");
         }
     </script>
 <body onLoad="navbar()">

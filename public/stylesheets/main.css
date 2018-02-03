@@ -209,6 +209,8 @@ a:hover {
     -webkit-transition: background-color .5s; /* Safari */
     transition: background-color .5s;
     z-index: 1000;
+    border: none;
+    /*min-height: 100px;*/
 }
 
 .navbar-bottom{
